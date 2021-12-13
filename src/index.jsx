@@ -3,6 +3,7 @@ import {request} from "./server";
 import ReactDOM from "react-dom";
 import { TaskList } from './components/TaskList';
 import { TaskForm } from './components/TaskForm';
+import "./index.css";
 
 const App = () => {
   // タスクリストを格納する

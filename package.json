@@ -2,20 +2,32 @@
   "name": "react-only",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server"
+    "build": "react-scripts build",
+    "dev": "webpack-dev-server",
+    "build:tailwind": "tailwind build src/styles.css -o src/tailwind.css",
+    "prestart": "tailwindcss build src/tailwind.css -o src/tailwind.compiled.css",
+    "start": "react-scripts start",
+    "prebuild": "tailwindcss build src/tailwind.css -o src/tailwind.compiled.css"
   },
   "dependencies": {
+    "@craco/craco": "^6.4.3",
+    "autoprefixer": "^10.4.0",
+    "postcss-cli": "^9.1.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "7.16.0",
     "@babel/preset-react": "^7.16.0",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "autoprefixer": "^9",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
     "miragejs": "^0.1.42",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"

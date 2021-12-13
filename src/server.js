@@ -1,5 +1,6 @@
 import { createServer, Model } from "miragejs";
 
+
 // mock API
 createServer({
   models: {
@@ -13,7 +14,7 @@ createServer({
 
   routes() {
     this.namespace = 'api';
-    
+
     // 取得
     this.get('/tasks', (schema) => {
       return schema.tasks.all();
@@ -55,4 +56,3 @@ export const request = {
     }).catch((e) => console.log(e.message));
   },
 };
-
