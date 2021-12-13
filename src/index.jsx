@@ -6,9 +6,9 @@ import { TaskForm } from './components/TaskForm';
 
 const App = () => {
   // タスクリストを格納する
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState([]);
   // 追加前のタスクを格納する
-  const [newTaskLabel, setNewTaskLabel] = useState<String>('');
+  const [newTaskLabel, setNewTaskLabel] = useState('');
 
   // ページマウント時にモックAPIからデータを取得
   useEffect(() => {
